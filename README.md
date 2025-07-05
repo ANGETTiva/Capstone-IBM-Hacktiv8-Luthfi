@@ -1,31 +1,25 @@
-# [Judul Sementara: Analisis Performa & Penggunaan Internet di Rumah]
+# Analisis Penggunaan Internet Rumah & Bottleneck Wi‑Fi
 
-## 📊 Ringkasan Proyek
-Analisis tren adopsi internet di rumah dan evaluasi apakah jaringan Wi‑Fi berpotensi menjadi bottleneck.
+## 📌 Deskripsi Proyek
+Proyek ini bertujuan menganalisis tren penggunaan internet rumah dan mengidentifikasi bottleneck performa Wi‑Fi berdasarkan data publik dari NTIA dan simulasi pengukuran kecepatan.
 
-## 📂 Sumber Data
-- NTIA Internet Use Survey (CSV, Nov 2023)
-- Dataset Internet Usage dari Kaggle
-- Dataset Wi‑Fi Bottleneck (Pengukuran >13.000 & 50+ rumah)
+## 📊 Dataset
+- `ntia_adopsi.csv` — Data tingkat penggunaan internet rumah (2015–2020)
+- `wifi_bottleneck.csv` — Data perbandingan kecepatan Wi‑Fi vs ISP
 
-## 🎯 Metodologi
-1. **Pre‑processing**: bersihkan, rename kolom, gabung beberapa dataset jika memungkinkan  
-2. **Eksplorasi & Visualisasi**: timeline adopsi; distribusi kecepatan Wi‑Fi  
-3. **Summarization AI**:  
-   - Buat ringkasan insight menggunakan model (misalnya GPT) di Google Colab  
-   - Contoh: “Dari 50 rumah, 100 % bottleneck terjadi saat >800 Mbps akses”
+## ⚙️ Tools
+- Google Colab
+- Pandas, Matplotlib, Seaborn
+- AI Summarization: `Replicate API` dengan model `a16z-infra/llama-2-13b-chat`
 
-## 🧠 AI Tools
-Platform: Google Colab (Python, Pandas, Transformers/T5-bahasa, dll)  
-Function: summarization otomatis insight temuan
+## 🔍 Insight & Temuan
+- Adopsi internet rumah meningkat 14.4% selama 5 tahun terakhir.
+- Sekitar 50% rumah mengalami bottleneck Wi‑Fi (Wi‑Fi lebih lambat dari akses ISP).
+- Ringkasan otomatis menunjukkan pentingnya optimasi jaringan lokal rumah.
 
-## 📈 Insight & Temuan
-- Istilah awal: misalnya, negara-negara berkembang vs berkembang  
-- Identifikasi faktor utama bottleneck  
-- Kata-kata ringkas dalam slide
+## 🤖 Dukungan AI
+Model `ibm-granite/granite-3.3-8b-instruct` dari Replicate digunakan untuk menyarikan insight dari teks hasil analisis. Prompt diarahkan untuk membuat ringkasan singkat dan relevan.
 
-## ✔️ Rekomendasi
-- Tips optimasi Wi‑Fi (channel, router, positioning)  
-- Prioritasi upgrading infrastruktur domestik
-
-## 📁 Struktur Repo
+## 📈 Output
+- Notebook: `summarization_colab.ipynb`
+- Slide presentasi: `slides/presentasi_capstone.pdf`
