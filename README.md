@@ -33,3 +33,4 @@ Ringkasan dihasilkan menggunakan prompt berbasis analisis data, lalu diringkas d
 ## 📈 Visualisasi Output
 - Grafik tren adopsi internet rumah (line chart)
 - Histogram distribusi kecepatan Wi‑Fi
+- Ringkasan Singkat dan Analisis Masalah
